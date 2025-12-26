@@ -38,37 +38,46 @@ main{
     font-size: 22px;
 }
 
-.main-order{
+.main-order, .your-order{
     padding: 20px 70px;
     font-family: "Roboto";
 }
 
-.menu-item{
+.menu-item, .order-item, .total{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 35px;
 }
 
+.order-item{
+    margin-top: 30px;
+}
+
 .item-emoji{
     font-size: 50px;
 }
 
-.item-descr {
+.item-descr, .item-price, .total-price {
     font-size: 20px;
 }
 
-#item-name{
+.item-name{
     font-weight: bold;
+    font-size: 20px;
 }
 
-#item-ingr{
+.item-ingr, .remove{
     color: rgb(153, 149, 149);
 }
 
+.remove{
+    cursor: pointer;
+}
 
-.item-add {
 
+.item-add, .close {
+    background-color: white;
     width: 36px;
     height: 36px;
     border-radius: 50%;          
@@ -86,5 +95,132 @@ main{
 
 .line{
     border: 1px solid #b7b4b4; 
+}
+
+.black-line{
+    border: 1px solid #000000; 
+    margin-top: 10px;
+}
+
+.your-order{
+    text-align: center;
+}
+
+
+.order-price{
+    margin-left: auto;
+}
+
+#complete-btn{
+    width: 100%;
+    padding: 14px 24px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: white;
+    font-family: "Roboto";
+    font-size: 20px;
+    border: none;
+    background-color: #58f3b2;
+    transition: 0.3s;
+
+    display: none
+}
+
+#pay-btn{
+    width: 100%;
+    padding: 14px 24px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: white;
+    font-family: "Roboto";
+    font-size: 20px;
+    border: none;
+    background-color: #58f3b2;
+    transition: 0.3s;
+}
+
+#complete-btn:hover, #pay-btn:hover{
+    background-color: #1ae590;
+}
+
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  z-index: 99;
+}
+
+
+
+.checkout{
+    font-family: "Roboto";
+    text-align: center;
+
+    min-height: 30vh;
+    max-width: 420px;
+    width: 90%;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+    opacity: 0;
+    transition: 
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.checkout form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+}
+
+input{
+    padding: 15px;
+    width: 100%;
+    font-size: 13px;
+    border: 1px solid #b7b4b4;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.checkout.active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+
+.success-popup img{
+    padding: 15px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+
+.close{
+    position: absolute;
+    right: -10;
+    top: -10;
 }
 

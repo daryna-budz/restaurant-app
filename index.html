@@ -15,6 +15,36 @@
             <div class="main-order">
                 
             </div>
+
+            <div class="your-order">
+                <h2>Your Order</h2>
+              
+                <div class="order-items"></div>
+              
+                <div class="black-line"></div>
+              
+                <div class="total">
+                  <h2><span>Total price:</span></h2>
+                  <span class="total-price order-price">$0</span>
+                </div>
+                <button id="complete-btn">Complete Order</button>
+            
+            </div>
+
+
+            <div class="overlay hidden"></div>
+            <div class="checkout hidden">
+                <h2>Enter card details</h2>
+                <form action="#">
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <input type="text" id="card" placeholder="Enter card number" maxlength="16" required>
+                    <input type="password" id="code" placeholder="Enter CVV" maxlength="3" required>
+                    <button id="pay-btn">Pay</button>
+                </form>
+            </div>
+
+              
+              
         </main>
 
 
