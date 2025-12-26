@@ -18,7 +18,7 @@ main{
 }
 
 .hero{
-    background: url("/img/i86551-burger-au-bacon-et-au-cheddar.jpg") center / cover no-repeat;
+    background: url("./img/i86551-burger-au-bacon-et-au-cheddar.jpg") center / cover no-repeat;
     min-height: 20vh;
     display: flex;
     flex-direction: column;
